@@ -2,7 +2,20 @@ package main
 
 import "fmt"
 
+//fibonachchi
+
+func fib(num int) int {
+	if num == 0 {
+		return 0
+	} else if num == 1 {
+		return 1
+	} else {
+		return fib(num-1) + fib(num-2)
+	}
+}
+
 //palindrom
+
 func isPalindrome(input string) bool {
 	for i := 0; i < len(input)/2; i++ {
 		if input[i] != input[len(input)-i-1] {
@@ -29,6 +42,7 @@ func OddEvenSum(input int) (int, int) {
 }
 
 // has duplicate array
+
 func hasDuplicate(arr []int) int {
 	visited := make(map[int]bool)
 	for i := 0; i < len(arr); i++ {
@@ -43,10 +57,10 @@ func hasDuplicate(arr []int) int {
 
 func main() {
 
-	/*var fizz int = 10
-	var buzz int = 20
-
-	var given int = 40
+	//fizzbuzz
+	fizz := 10
+	buzz := 20
+	given := 40
 
 	if given%fizz == 0 && given%buzz == 0 {
 		fmt.Println("fizz buzz")
@@ -54,21 +68,10 @@ func main() {
 		fmt.Println("buzz")
 	} else if given%fizz == 0 {
 		fmt.Println("fizz")
-	}*/
+	}
 
+	fmt.Println(fib(5))
 	fmt.Println(isPalindrome("anna"))
 	fmt.Println(OddEvenSum(32))
 	fmt.Println(hasDuplicate([]int{1, 5, 2, 3, 4, 5, 6}))
 }
-
-/*
-//fibonachchi
-func fib(num int) int {
-	if num == 0 {
-		return 0
-	} else if num == 1 {
-		return 1
-	} else {
-		return fib(num-1) + fib(num-2)
-	}
-}*/
