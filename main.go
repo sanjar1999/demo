@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"reflect"
+)
+
 //fibonachchi
 
 func fib(num int) int {
@@ -54,39 +59,39 @@ func hasDuplicate(arr []int) int {
 }
 
 func main() {
-	/*
-		//fizzbuzz
-		fizz := 10
-		buzz := 20
-		given := 40
 
-		if given%fizz == 0 && given%buzz == 0 {
-			fmt.Println("fizz buzz")
-		} else if given%buzz == 0 {
-			fmt.Println("buzz")
-		} else if given%fizz == 0 {
-			fmt.Println("fizz")
+	//fizzbuzz
+	fizz := 10
+	buzz := 20
+	given := 40
+
+	if given%fizz == 0 && given%buzz == 0 {
+		fmt.Println("fizz buzz")
+	} else if given%buzz == 0 {
+		fmt.Println("buzz")
+	} else if given%fizz == 0 {
+		fmt.Println("fizz")
+	}
+
+	fmt.Println(fib(5))
+	fmt.Println(isPalindrome("anna"))
+	fmt.Println(OddEvenSum(32))
+	fmt.Println(hasDuplicate([]int{1, 5, 2, 3, 4, 5, 6}))
+
+	m := map[string]interface{}{}
+	m["one"] = 1
+	m["two"] = 2.0
+	m["three"] = true
+
+	for k, v := range m {
+		switch v.(type) {
+		case int:
+			fmt.Printf("%s is an integer\n", k)
+		case float64:
+			fmt.Printf("%s is a float\n", k)
+		default:
+			fmt.Printf("%s is a %v\n", k, reflect.TypeOf(v))
 		}
+	}
 
-		fmt.Println(fib(5))
-		fmt.Println(isPalindrome("anna"))
-		fmt.Println(OddEvenSum(32))
-		fmt.Println(hasDuplicate([]int{1, 5, 2, 3, 4, 5, 6}))
-
-		m := map[string]interface{}{}
-		m["one"] = 1
-		m["two"] = 2.0
-		m["three"] = true
-
-		for k, v := range m {
-			switch v.(type) {
-			case int:
-				fmt.Printf("%s is an integer\n", k)
-			case float64:
-				fmt.Printf("%s is a float\n", k)
-			default:
-				fmt.Printf("%s is a %v\n", k, reflect.TypeOf(v))
-			}
-		}
-	*/
 }
